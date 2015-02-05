@@ -21,7 +21,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
 
     server1.vm.network "private_network", ip: "192.168.2.2"
-
+    server1.vm.network "forwarded_port", guest: 8500, host: 8500
     config.vm.provision "shell", path: "scripts/master.sh"
   end
   # End server1
