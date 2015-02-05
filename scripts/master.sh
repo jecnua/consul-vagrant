@@ -2,6 +2,8 @@
 sudo cat > /etc/consul/config.json << EOL
 {
   "datacenter": "vagrant-dc",
+  "client_addr": "0.0.0.0",
+  "ui_dir": "/var/consul_web_ui",
   "data_dir": "/var/cache/consul",
   "log_level": "INFO",
   "node_name": "consul-master-1",
